@@ -2,7 +2,6 @@ package com.abc.nestedscrolltest
 
 import android.content.Context
 import android.util.AttributeSet
-import android.util.Log
 import android.view.MotionEvent
 import android.widget.HorizontalScrollView
 import androidx.core.view.NestedScrollingChild3

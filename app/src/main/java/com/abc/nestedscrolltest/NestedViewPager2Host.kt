@@ -2,12 +2,10 @@ package com.abc.nestedscrolltest
 
 import android.content.Context
 import android.util.AttributeSet
-import android.util.Log
 import android.view.View
 import android.widget.FrameLayout
 import androidx.core.view.NestedScrollingParent3
 import androidx.core.view.ViewCompat
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
@@ -66,12 +64,12 @@ class NestedViewPager2Host @JvmOverloads constructor(context: Context, attSet: A
             }
             val dis = snapHelper.calculateDistanceToFinalSnap(layoutManager,startDragView)!!.first()
             if (dx < 0 && dis < 0) {
-                // 向左👈
+                // left 👈
                 val consumedDx = Math.max(dx, dis)
                 consumed[0] = consumedDx
                 performFakeDragBy(consumedDx)
             } else if (dx > 0 && dis > 0) {
-                // 向左👉
+                // right 👉
                 val consumedDx = Math.min(dx, dis)
                 consumed[0] = consumedDx
                 performFakeDragBy(consumedDx)
